@@ -31,8 +31,8 @@ class $modify(MyPlayerObject, PlayerObject) {
 		PlayerObject::bumpPlayer(bumpMod, objectType, noEffects, object);
 		if (snapOnJumpPad) MyPlayerObject::snapToNearest90();
 	}
-	void boostPlayer(float yVelocity) {
-		PlayerObject::boostPlayer(yVelocity);
+	void ringJump(RingObject* object, bool skipCheck) {
+		PlayerObject::ringJump(object, skipCheck);
 		if (snapOnJumpOrb) MyPlayerObject::snapToNearest90();
 	}
 };
