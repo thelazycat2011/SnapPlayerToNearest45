@@ -8,7 +8,7 @@
 	},
 	"id": "raydeeux.snapplayertonearest90",
 	"name": "SnapPlayerToNearest90",
-	"version": "v1.0.3",
+	"version": "v1.0.4",
 	"developer": "RayDeeUx",
 	"description": "Snaps the player to the nearest multiple of 90 degrees.",
 	"repository": "https://github.com/RayDeeUx/SnapPlayerToNearest90",
@@ -23,10 +23,106 @@
 			"type": "bool",
 			"default": false
 		},
+		"ignoreYellowPad": {
+			"name": "Don't Snap Rotation on Yellow Pad",
+			"type": "bool",
+			"default": false,
+			"enable-if": "enabled && snapOnJumpPad"
+		},
+		"ignorePinkPad": {
+			"name": "Don't Snap Rotation on Pink Pad",
+			"type": "bool",
+			"default": false,
+			"enable-if": "enabled && snapOnJumpPad"
+		},
+		"ignoreBluePad": {
+			"name": "Don't Snap Rotation on Blue Pad",
+			"type": "bool",
+			"default": false,
+			"enable-if": "enabled && snapOnJumpPad"
+		},
+		"ignoreRedPad": {
+			"name": "Don't Snap Rotation on Red Pad",
+			"type": "bool",
+			"default": false,
+			"enable-if": "enabled && snapOnJumpPad"
+		},
+		"ignoreSpiderPad": {
+			"name": "Don't Snap Rotation on Spider Pad",
+			"type": "bool",
+			"default": false,
+			"enable-if": "enabled && snapOnJumpPad"
+		},
 		"snapOnJumpOrb": {
 			"name": "Snap Rotation on Jump Orb",
 			"type": "bool",
 			"default": false
+		},
+		"ignoreYellowOrb": {
+			"name": "Don't Snap Rotation on Yellow Orb",
+			"type": "bool",
+			"default": false,
+			"enable-if": "enabled && snapOnJumpOrb"
+		},
+		"ignorePinkOrb": {
+			"name": "Don't Snap Rotation on Pink Orb",
+			"type": "bool",
+			"default": false,
+			"enable-if": "enabled && snapOnJumpOrb"
+		},
+		"ignoreBlueOrb": {
+			"name": "Don't Snap Rotation on Blue Orb",
+			"type": "bool",
+			"default": false,
+			"enable-if": "enabled && snapOnJumpOrb"
+		},
+		"ignoreGreenOrb": {
+			"name": "Don't Snap Rotation on Green Orb",
+			"type": "bool",
+			"default": false,
+			"enable-if": "enabled && snapOnJumpOrb"
+		},
+		"ignoreBlackOrb": {
+			"name": "Don't Snap Rotation on Black Orb",
+			"type": "bool",
+			"default": false,
+			"enable-if": "enabled && snapOnJumpOrb"
+		},
+		"ignoreRedOrb": {
+			"name": "Don't Snap Rotation on Red Orb",
+			"type": "bool",
+			"default": false,
+			"enable-if": "enabled && snapOnJumpOrb"
+		},
+		"ignoreGreenDashOrb": {
+			"name": "Don't Snap Rotation on Green Dash Orb",
+			"type": "bool",
+			"default": false,
+			"enable-if": "enabled && snapOnJumpOrb"
+		},
+		"ignorePinkDashOrb": {
+			"name": "Don't Snap Rotation on Pink Dash Orb",
+			"type": "bool",
+			"default": false,
+			"enable-if": "enabled && snapOnJumpOrb"
+		},
+		"ignoreSpiderOrb": {
+			"name": "Don't Snap Rotation on Spider Orb",
+			"type": "bool",
+			"default": false,
+			"enable-if": "enabled && snapOnJumpOrb"
+		},
+		"ignoreCustomOrb": {
+			"name": "Don't Snap Rotation on Custom Orb",
+			"type": "bool",
+			"default": false,
+			"enable-if": "enabled && snapOnJumpOrb"
+		},
+		"ignoreTeleportOrb": {
+			"name": "Don't Snap Rotation on Teleport Orb",
+			"type": "bool",
+			"default": false,
+			"enable-if": "enabled && snapOnJumpOrb"
 		}
 	},
 	"tags": [ "joke", "cheat", "gameplay" ],
