@@ -27,10 +27,10 @@ class $modify(MyPlayerObject, PlayerObject) {
 		PlayerObject::hitGround(object, notFlipped);
 		MyPlayerObject::snapToNearest90(false);
 	}
-	void bumpPlayer(float bumpMod, int objectType, bool noEffects, GameObject* object) {
-		PlayerObject::bumpPlayer(bumpMod, objectType, noEffects, object);
+	void propellPlayer(float yVelocity, bool noEffects, int objectType) {
+		PlayerObject::bumpPlayer(yVelocity, noEffects, objectType);
 		if (this->isInNormalMode() && snapOnJumpPad) {
-			log::info("objectID: {}", object->m_objectID);
+			log::info("objectType: {}", objectType);
 			MyPlayerObject::snapToNearest90(true);
 		}
 	}
