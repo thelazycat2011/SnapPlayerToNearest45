@@ -1,4 +1,6 @@
 # SnapPlayerToNearest90 Changelog
+## v1.0.3
+- It has come to my attention that the same someone being extra pedantic continues to be pedantic yet again.
 ## v1.0.2
 - It has come to my attention that someone likes to be extra pedantic about when the cube snaps to the nearest 90 degree angle.
 ## v1.0.1
