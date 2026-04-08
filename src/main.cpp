@@ -28,7 +28,7 @@ class $modify(MyPlayerObject, PlayerObject) {
 		MyPlayerObject::snapToNearest90(false);
 	}
 	void propellPlayer(float yVelocity, bool noEffects, int objectType) {
-		PlayerObject::bumpPlayer(yVelocity, noEffects, objectType);
+		PlayerObject::propellPlayer(yVelocity, noEffects, objectType);
 		if (this->isInNormalMode() && snapOnJumpPad) {
 			log::info("objectType: {}", objectType);
 			MyPlayerObject::snapToNearest90(true);
