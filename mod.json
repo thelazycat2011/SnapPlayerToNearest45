@@ -22,7 +22,7 @@
 			"name": "Snap to the nearest",
 			"description": "Change the multiplier to snap to, default 90 degrees",
 			"type": "float",
-			"default": "90",
+			"default": 90,
 			"min": 0,
 			"max": 360,
 			"control": {
