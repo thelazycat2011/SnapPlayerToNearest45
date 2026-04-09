@@ -24,6 +24,8 @@ bool ignoreBluePad = false;
 bool ignoreRedPad = false;
 bool ignoreSpiderPad = false;
 
+float snapToValue = 90.0f;
+
 $on_mod(Loaded) {
 	enabled = Mod::get()->getSettingValue<bool>("enabled");
 	listenForSettingChanges<bool>("enabled", [](const bool newEnabled) { enabled = newEnabled; });
@@ -82,12 +84,15 @@ $on_mod(Loaded) {
 	ignoreSpiderPad = Mod::get()->getSettingValue<bool>("ignoreSpiderPad");
 	listenForSettingChanges<bool>("ignoreSpiderPad", [](const bool ignoreSpiderPadNew) { ignoreSpiderPad = ignoreSpiderPadNew; });
 
+	snapToValue = Mod::get()->getSettingValue<float>("snapToValue");
+	listenForSettingChanges<float>("snapToValue", [](const float snapToValueNew) { snapToValue = snapToValueNew; });
+
 }
 
 class $modify(MyPlayerObject, PlayerObject) {
 	void snapToNearest90(const bool enforceGroundCheck) {
 		if (enabled && this->m_gameLayer && (this == m_gameLayer->m_player1 || this == m_gameLayer->m_player2) && this->isInNormalMode() && !this->m_isDashing && ((this->m_isOnGround && !this->m_isOnSlope) || enforceGroundCheck)) {
-			this->setRotation(std::round(this->getRotation() / 90.f) * 90.f);
+			this->setRotation(std::round(this->getRotation() / snapToValue) * snapToValue);
 		}
 	}
 	void hitGround(GameObject* object, bool notFlipped) {
